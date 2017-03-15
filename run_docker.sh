@@ -3,11 +3,11 @@ apt-get install -y cgroup-bin
 docker pull rallyforge/rally:0.8.1
 check_ceph=$(cat /etc/cinder/cinder.conf |grep '\[RBD-backend\]' | wc -l)
 if [ ${check_ceph} == '1' ]; then
-    cp tempest_confs/mos10_ceph.conf /home
-    cp skip_lists/mos10_ceph_skip.yaml /home
+    cp tempest_confs/mos10_ceph.conf /home/temp.conf
+    cp skip_lists/mos10_ceph_skip.yaml /home/skip.yaml
 else
-    cp tempest_confs/mos10_lvm.conf /home
-    cp skip_lists/mos10_lvm_skip.yaml /home
+    cp tempest_confs/mos10_lvm.conf /home/temp.conf
+    cp skip_lists/mos10_lvm_skip.yaml /home/skip.yaml
 fi
 cp $1 /home
 cp run_tempest_with_ironic.sh /home
