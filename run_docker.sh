@@ -10,5 +10,6 @@ wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/ski
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/run_tempest.sh
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/install_plugin.sh
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/debug.sh
+wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/cleanup.sh
 docker exec -ti $docker_id bash -c "bash run_tempest.sh"
 docker exec -ti $docker_id bash -c "bash"
