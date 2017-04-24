@@ -4,7 +4,7 @@ image_id=$(docker images | grep 0.9.0| awk '{print $3}')
 docker run --net host -v /root/:/home/rally -tid -u root $image_id
 docker_id=$(docker ps | grep $image_id | awk '{print $1}'| head -1)
 cd /root
-cp ${2} /home/openrc_tempest
+cp ${2} /root/openrc_tempest
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/tempest_confs/mcp_${1}.conf -O temp.conf
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/skip_lists/mcp_${1}_skip.yaml -O skip.yaml
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/run_tempest.sh
