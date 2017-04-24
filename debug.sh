@@ -4,4 +4,4 @@ cd $tempest_dir
 deploy_id=$(rally deployment list |grep tempest |awk {'print$2'})
 TEMPEST_CONFIG_DIR="/home/rally/.rally/verification/verifier-$id/for-deployment-$deploy_id"
 export TEMPEST_CONFIG_DIR=$TEMPEST_CONFIG_DIR
-pip install ipdb pep8 flake8
+pip install ipdb
