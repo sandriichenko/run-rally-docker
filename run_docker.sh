@@ -11,5 +11,7 @@ wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/run
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/install_plugin.sh
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/debug.sh
 wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/cleanup.sh
+wget https://raw.githubusercontent.com/sandriichenko/run-rally-docker/master/rejoin.sh
+chmod +x run_tempest.sh install_plugin.sh debug.sh cleanup.sh rejoin.sh
 docker exec -ti $docker_id bash -c "bash run_tempest.sh"
 docker exec -ti $docker_id bash -c "bash"
